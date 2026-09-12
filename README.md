@@ -1,2 +1,21 @@
-# Mobile_Secure_Releases
-Official Windows installers and update feed for Mobile Secure Mode. Source code is maintained separately.
+# Mobile Secure Mode
+
+Windows 11에서 공용 네트워크 보호 설정을 적용하고, 앱이 변경한 값만 원래대로 복원하는 도구입니다.
+
+## 설치·업데이트
+
+[공식 다운로드](https://github.com/omo2kane-ops/Mobile_Secure_Releases/releases)에서 최신 `MobileSecureMode-…-Setup.exe`를 실행하고 Windows UAC를 승인하세요. ZIP 압축 해제나 PowerShell 명령은 필요 없습니다. 기존 설정과 보호 복원 기록은 유지됩니다.
+
+0.4.0부터 앱 하단의 **업데이트**에서 최신 버전 확인 → 다운로드 → 앱 종료 후 설치를 이용할 수 있습니다. 시작 시 자동 확인은 별도 선택이며 기본 꺼짐입니다. 로그인·토큰이 필요 없으며, GitHub에 HTTPS로 연결합니다. 다운로드 파일은 GitHub가 제공한 SHA-256과 비교하고 설치 직전 다시 검증합니다.
+
+보호 설정을 변경하는 중에는 설치하지 않습니다. 0.3.x 앱은 정상 종료 요청을 지원하지 않으므로 설치기가 안내하면 알림 영역에서 **종료**를 선택하고 다시 시도하세요. 창의 X 버튼은 알림 영역으로 숨길 수 있습니다.
+
+## 삭제
+
+앱에서 보안 모드를 끄고 보류된 복원까지 완료한 뒤 **Windows 설정 → 앱 → 설치된 앱 → Mobile Secure Mode → 제거**를 선택합니다. 설정·로그·이력은 보존됩니다.
+
+## 검증과 제한
+
+이 앱은 프리릴리스입니다. 물리 Wi-Fi 전환·기업 도메인/MDM·IPv6 DNS 등 모든 구성을 검증한 것은 아닙니다. 설치 파일은 아직 Authenticode 서명이 없어 Windows에 알 수 없는 게시자가 표시될 수 있습니다. 파일 해시는 코드 서명을 대신하지 않습니다. 공식 배포 경로에서 받은 파일만 실행하세요.
+
+이 저장소는 설치 파일과 업데이트 정보만 배포합니다. 소스 코드는 별도로 관리하며 앱에는 저장소 인증 토큰이나 사용자 자격 증명이 포함되지 않습니다.
